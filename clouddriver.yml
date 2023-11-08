@@ -1,0 +1,20 @@
+kubernetes:
+enabled: true
+ primaryAccount: account1
+ accounts:
+   - name: account1
+     kubeconfigFile: # "encryptedFile" or "configserver" reference, or file mounted into clouddriver pod
+     providerVersion: V2
+     permissions: {}
+     dockerRegistries: []
+     cacheThreads: 1
+     namespaces: []
+     omitNamespaces: []
+     kinds: []
+     omitKinds: []
+     customResources: []
+     checkPermissionsOnStartup: true
+     liveManifestCalls: false
+     cachingPolicies: []
+     oAuthScopes: []
+     onlySpinnakerManaged: false
