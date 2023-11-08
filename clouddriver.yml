@@ -1,20 +1,23 @@
 kubernetes:
 enabled: true
- primaryAccount: account1
+ primaryAccount: oc-account
  accounts:
-   - name: account1
+   - name: oc-account
      kubeconfigFile: # "encryptedFile" or "configserver" reference, or file mounted into clouddriver pod
+     requiredGroupMembership: []
      providerVersion: V2
      permissions: {}
      dockerRegistries: []
+     configureImagePullSecrets: true
      cacheThreads: 1
-     namespaces: []
+     namespaces: 
+        - ciurescuraul-dev
      omitNamespaces: []
      kinds: []
      omitKinds: []
      customResources: []
      checkPermissionsOnStartup: true
-     liveManifestCalls: false
+     liveManifestCalls: true
      cachingPolicies: []
      oAuthScopes: []
-     onlySpinnakerManaged: false
+     onlySpinnakerManaged: true
