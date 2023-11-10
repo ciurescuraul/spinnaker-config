@@ -3,7 +3,7 @@ kubernetes:
   primaryAccount: oc-account
   accounts:
     - name: oc-account
-      kubeconfigFile: configserver: oc-kubenfig # "encryptedFile" or "configserver" reference, or file mounted into clouddriver pod
+      kubeconfigFile: configserver:oc-kubenfig # "encryptedFile" or "configserver" reference, or file mounted into clouddriver pod
       requiredGroupMembership: []
       providerVersion: V2
       permissions: {}
